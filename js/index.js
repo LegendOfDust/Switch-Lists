@@ -6,7 +6,12 @@ waterAnimals = ['Narwhal', 'Axolotl', 'Orca', 'Jellyfish'];
 showList = () => {
     const land = document.getElementById('land');
     const water = document.getElementById('water');
-
+    //loop to attempt to remove list items. Didn't work and broke everything
+    //for(let i = 0; i < 4; i++){
+    //    const removeEl = document.getElementsByTagName('li')[i];
+    //    const containerEl = removeEl.parentNode;
+    //    containerEl.removeChild(removeEl);
+    //}
     //if land dwellers is selected
     if(land.checked){
         //runs through full land animal array
@@ -26,9 +31,10 @@ showList = () => {
     else if (water.checked){
         //runs through full water animal array
         for(let i = 0; i < waterAnimals.length; i++){
+            //logs the animal
+            console.log(waterAnimals[i]);
             //displays current element of water animal array
             //I have no idea how this works or what it's doing
-            console.log(waterAnimals[i]);
             const newEl = document.createElement('li');
             const newText = document.createTextNode(waterAnimals[i]);
             newEl.appendChild(newText);
